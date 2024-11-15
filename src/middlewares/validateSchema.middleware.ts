@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-
-import { UnprocessableError } from "@/protocols/error.types";
+import { UnprocessableError } from "../protocols/error.types";
 
 export default function validateSchema(schema: any) {
   return (req: Request, res: Response, next: NextFunction) => {

@@ -1,10 +1,9 @@
-import express, { Application, json } from "express";
+import express, { json } from "express";
 import "express-async-errors";
 import cors from 'cors';
-import ErrorCatcher from "@/middlewares/errors.middleware";
 import MainRouter from "./routes/index.routes";
 import OpenAI from "openai";
-const openai = new OpenAI();
+// const openai = new OpenAI();
 
 const app = express();
 

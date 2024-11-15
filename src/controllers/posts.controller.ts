@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
-import PostService from "@/services/post.services";
-import { HttpStatus } from "@/protocols/error.types";
+import { HttpStatus } from "../protocols/error.types";
 
 async function getAll(req: Request, res: Response) {
 

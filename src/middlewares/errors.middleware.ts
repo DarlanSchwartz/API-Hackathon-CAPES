@@ -1,7 +1,8 @@
 
 import { NextFunction, Request, Response } from "express";
 import { isAxiosError } from "axios";
-import { ApplicationError, HttpStatus } from "@/protocols/error.types";
+import { HttpStatus, ApplicationError } from "../protocols/error.types";
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function errorHandler(error: any, req: Request, res: Response, _next: NextFunction) {
     if (isAxiosError(error)) return res.status(error?.status ?? HttpStatus.INTERNAL_SERVER_ERROR).send(error?.response?.data);
