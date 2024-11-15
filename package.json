@@ -1,5 +1,5 @@
 {
-  "name": "template-typescript-express-pg-architecture",
+  "name": "hackathon-capes",
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
@@ -12,26 +12,28 @@
   "author": "Darlan Schwartz",
   "license": "ISC",
   "dependencies": {
-    "@joi/date": "^2.1.0",
+    "@joi/date": "^2.1.1",
+    "axios": "^1.7.7",
     "cors": "^2.8.5",
-    "dayjs": "^1.11.9",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
     "express-async-errors": "^3.1.1",
-    "http-status": "^1.7.0",
-    "joi": "^17.9.2",
-    "pg": "^8.11.3"
+    "http-status": "^2.0.0",
+    "joi": "^17.13.3",
+    "langchain": "^0.3.5",
+    "pg": "^8.13.1"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.14",
-    "@types/express": "^4.17.17",
-    "@types/node": "^18.17.16",
-    "@types/pg": "^8.10.2",
-    "nodemon": "^2.0.22",
-    "ts-node": "^10.9.1",
-    "tsc-alias": "^1.8.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.2.2",
-    "typescript-transform-paths": "^3.4.6"
+    "typescript": "^5.6.3",
+    "typescript-transform-paths": "^3.5.2"
   }
 }
