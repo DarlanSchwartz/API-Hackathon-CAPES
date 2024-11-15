@@ -1,7 +1,6 @@
 import db from "@/database/database.connection";
-import { Post } from "@/protocols/post.types";
 
-async function create(post: Post) {
+async function create() {
 
 }
 
@@ -10,7 +9,7 @@ async function getAll(limit: number, name: string) {
 }
 
 
-async function edit(newPost: Post, postId: number) {
+async function edit() {
 
 }
 

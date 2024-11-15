@@ -1,22 +1,20 @@
-import { Post } from "@/protocols/post.types";
-
-async function getAll(limit: number, name: string) {
+async function getAll() {
 
 }
 
-async function create(post: Post): Promise<void> {
+async function create() {
 
 }
 
-async function like(postId: number): Promise<void> {
+async function like() {
 
 }
 
-async function update(postId: number, newPost: Post): Promise<void> {
+async function update() {
 
 }
 
-async function remove(postId: number): Promise<void> {
+async function remove() {
 
 }
 
