@@ -2,12 +2,18 @@
   "compilerOptions": {
     "outDir": "dist",
     "esModuleInterop": true,
-    "module": "CommonJS",
+    "module": "ES2015",
     "moduleResolution": "Node",
+    "skipLibCheck": true,
     "baseUrl": "src",
-    "rootDirs": ["src", "tests"],
+    "rootDirs": [
+      "src",
+      "tests"
+    ],
     "paths": {
-      "@/*": ["*"]
+      "@/*": [
+        "*"
+      ]
     },
     "plugins": [
       {
@@ -18,5 +24,8 @@
   "ts-node": {
     "esm": true
   },
-  "include": ["src", "tests"]
+  "include": [
+    "src",
+    "tests"
+  ]
 }
