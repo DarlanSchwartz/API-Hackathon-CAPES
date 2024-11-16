@@ -6,6 +6,7 @@ export default class ChatController {
 
   static async talk(req: Request, res: Response) {
     const response = await ChatService.talk(req.body.message);
+    console.log(response);
     return res.status(HttpStatus.CREATED).send(response);
   }
 }

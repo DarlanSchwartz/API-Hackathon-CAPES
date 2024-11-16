@@ -2,13 +2,8 @@ import express, { json } from "express";
 import "express-async-errors";
 import cors from 'cors';
 import MainRouter from "./routes/index.routes";
-import OpenAI from "openai";
-
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-
-const openai = new OpenAI();
-
 const app = express();
 
 app.use(cors());
@@ -16,29 +11,6 @@ app.use(json());
 app.use(MainRouter);
 // app.use(ErrorCatcher);
 const PORT = process.env.PORT || 5000;
-
-async function startChatGPT() {
-  const completion = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
-    max_completion_tokens: 500,
-
-    messages: [
-      {
-        role: "system", content: `Você é um pesquisador acadêmico que melhora a experiência do usuário na plataforma do Portal de Periódicos da CAPES,
-        otimizando tanto as buscas quanto de publicações de pesquisas científicas, 
-        contribuindo para evolução da plataforma e oferecendo uma experiência de usuário mais fluida, intuitiva e personalizada.
-        Você sempre deve ler o conteúdo da pagina https://www.periodicos.capes.gov.br/index.php/acervo/buscador.html?q=<o_que_o_usuario_pesquisou> para buscar artigos científicos relevantes.
-        Onde <o_que_o_usuario_pesquisou> é o assunto resumido em 3 palavras chaves sobre que o usuário falou com você.
-        Sempre devolva junto com a resposta, links de artigos científicos relevantes para o usuário,
-        ` },
-      {
-        role: "user",
-        content: "Me de links artigos sobre revolução francesa",
-      },
-    ],
-  });
-  console.log(JSON.stringify(completion, null, 2));
-}
 
 interface Article {
   title: string;
@@ -124,5 +96,4 @@ function removeDuplicateLinks(links: string[]): string[] {
 
 app.listen(PORT, () => {
   console.log(`--------------- Server is up and running on port ${PORT}`);
-  startChatGPT();
 });
