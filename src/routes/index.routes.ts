@@ -1,6 +1,6 @@
 import { Router } from "express";
-import postsRouter from "./posts.routes";
+import ChatRouter from "./chat.routes";
 
 const MainRouter = Router();
-MainRouter.use(postsRouter);
+MainRouter.use(ChatRouter);
 export default MainRouter;
